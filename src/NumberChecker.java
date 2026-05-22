@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class NumberChecker {
 
-    public static String checkNumber(double number) {
+    public static String checkNumber(int number) {
         if (number > 0) {
             return "positive";
         } else if (number < 0) {
@@ -32,7 +32,7 @@ public class NumberChecker {
             if (!validNumber) {
                 System.out.println("Invalid input. Please enter a number.");
             } else {
-                double number = Double.parseDouble(input);
+                int number = Integer.parseInt(input);
                 String result = checkNumber(number);
                 System.out.println(number + " is " + result);
             }
