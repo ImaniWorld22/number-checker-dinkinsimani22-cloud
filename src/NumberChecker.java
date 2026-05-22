@@ -40,6 +40,7 @@ public class NumberChecker {
             System.out.print("Enter a number (or 'stop' to quit): ");
             input = scanner.nextLine();
         }
+        //test case rub
 
         scanner.close();
 
