@@ -37,6 +37,8 @@ public class NumberChecker {
                 String result = checkNumber(number);
                 System.out.println(number + " is " + result);
             }
+            //test
+
 
             System.out.print("Enter a number (or 'stop' to quit): ");
             input = scanner.nextLine();
