@@ -3,15 +3,44 @@ import java.util.Scanner;
 public class NumberChecker {
 
     public static String checkNumber(double number) {
-        // TODO: return "positive", "negative", or "zero"
-        return "";
+        if (number > 0) {
+            return "positive";
+        } else if (number < 0) {
+            return "negative";
+        } else {
+            return "zero";
+        }
     }
 
     public static void main(String[] args) {
-        // TODO:
-        // 1. Ask user for a number (or "stop" to quit)
-        // 2. Validate input is a number
-        // 3. Call checkNumber and display result
-        // 4. Loop until user types "stop"
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number (or 'stop' to quit): ");
+        String input = scanner.nextLine();
+
+        while (!input.equalsIgnoreCase("stop")) {
+            boolean validNumber = true;
+
+            for (int i = 0; i < input.length(); i++) {
+                char c = input.charAt(i);
+                if (!Character.isDigit(c) && c != '.' && c != '-') {
+                    validNumber = false;
+                    break;
+                }
+            }
+
+            if (!validNumber) {
+                System.out.println("Invalid input. Please enter a number.");
+            } else {
+                double number = Double.parseDouble(input);
+                String result = checkNumber(number);
+                System.out.println(number + " is " + result);
+            }
+
+            System.out.print("Enter a number (or 'stop' to quit): ");
+            input = scanner.nextLine();
+        }
+
+        scanner.close();
     }
 }
