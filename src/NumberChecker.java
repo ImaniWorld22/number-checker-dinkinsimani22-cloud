@@ -29,6 +29,7 @@ public class NumberChecker {
                 }
             }
 
+
             if (!validNumber) {
                 System.out.println("Invalid input. Please enter a number.");
             } else {
