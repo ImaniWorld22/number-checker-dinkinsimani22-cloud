@@ -18,8 +18,7 @@ jobs:
         uses: classroom-resources/autograding-command-grader@v1
         with:
           test-name: Number Checker Test
-          setup-command: curl -O https://raw.githubusercontent.com/izdinkins/demo-number-test/main/test/NumberCheckerTest.java
-            && javac -d . src/NumberChecker.java NumberCheckerTest.java
+          setup-command: curl -O https://raw.githubusercontent.com/izdinkins/demo-number-test/main/test/NumberCheckerTest.java && javac src/NumberChecker.java NumberCheckerTest.java -d .
           command: java NumberCheckerTest
           timeout: 10
           max-score: 100
