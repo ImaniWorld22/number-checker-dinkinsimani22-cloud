@@ -42,5 +42,6 @@ public class NumberChecker {
         }
 
         scanner.close();
+
     }
 }
